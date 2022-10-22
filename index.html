@@ -9,15 +9,18 @@
 	<body>
 		<div>
 			<h1>How soon is now?</h1>
-			<div class="start-container">
-				<label for="start">Start date:</label>
-				<input type="date" id="start" name="start-date" />
-				<button id="today-btn">Today</button>
-			</div>
-			<div class="end-container">
-				<label for="start">End date:</label>
-				<input type="date" id="start" name="start-date" />
-			</div>
+			<form action="">
+				<div class="start-container">
+					<label for="start">Start date:</label>
+					<input type="date" id="start" name="start-date" />
+					<button id="today-btn">Today</button>
+				</div>
+				<div class="end-container">
+					<label for="start">End date:</label>
+					<input type="date" id="start" name="start-date" />
+				</div>
+				<button type="submit">Submit</button>
+			</form>
 		</div>
 		<script src="luxon.min.js"></script>
 		<script src="script.js"></script>
