@@ -4,6 +4,7 @@ const endInput = document.getElementById("end");
 const todayBtn = document.getElementById("today-btn");
 const resultDisplay = document.getElementById("result");
 
+/* TO-DO: Need to work on how to set today's date inside the date input */
 todayBtn.addEventListener("click", (event) => {
 	event.preventDefault();
 	var DateTime = luxon.DateTime;
@@ -13,7 +14,6 @@ todayBtn.addEventListener("click", (event) => {
 
 submitBtn.addEventListener("click", (event) => {
 	event.preventDefault();
-	console.log(startInput.value);
 	var DateTime = luxon.DateTime;
 	const startDate = DateTime.fromISO(startInput.value);
 	const endDate = DateTime.fromISO(endInput.value);
@@ -22,6 +22,9 @@ submitBtn.addEventListener("click", (event) => {
 
 const calculateResult = (start, end) => {
 	const result = end.diff(start, ["months", "days"]).toObject();
-	console.log(result);
-	return result;
+	showResult(result, resultDisplay);
+};
+
+const showResult = (result, resultDisplay) => {
+	resultDisplay.innerHTML = `${result.months} months and ${result.days} days.`;
 };
