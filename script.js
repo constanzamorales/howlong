@@ -11,7 +11,7 @@ todayBtn.addEventListener("click", (event) => {
 	let today = DateTime.now();
 	today = today.toISODate();
 	console.log(today);
-	startInput.defaultValue = today;
+	startInput.value = today;
 });
 
 submitBtn.addEventListener("click", (event) => {
