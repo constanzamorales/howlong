@@ -4,13 +4,11 @@ const endInput = document.getElementById("end");
 const todayBtn = document.getElementById("today-btn");
 const resultDisplay = document.getElementById("result");
 
-/* TO-DO: Can't set today's date after the start date has been set. Need to fix that */
 todayBtn.addEventListener("click", (event) => {
 	event.preventDefault();
 	var DateTime = luxon.DateTime;
 	let today = DateTime.now();
 	today = today.toISODate();
-	console.log(today);
 	startInput.value = today;
 });
 
