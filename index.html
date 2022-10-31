@@ -13,8 +13,10 @@
 			<form action="">
 				<div class="start-container">
 					<label for="start">Start date:</label>
-					<input type="date" id="start" name="start-date" />
-					<button id="today-btn">Today</button>
+					<div class="start-input">
+						<input type="date" id="start" name="start-date" />
+						<button class="today-btn" id="today-btn">Today</button>
+					</div>
 				</div>
 				<div class="end-container">
 					<label for="start">End date:</label>
@@ -23,7 +25,7 @@
 				<button class="submit-btn" id="submit-btn" type="submit">Submit</button>
 			</form>
 			<section>
-				<h2 id="result"></h2>
+				<h2 class="result" id="result"></h2>
 			</section>
 		</div>
 		<script src="luxon.min.js"></script>
